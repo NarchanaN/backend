@@ -16,6 +16,7 @@ console.log(err)
 
 const userRouter = require('./routes/users_router');
 const adminRouter = require('./routes/admin_router');
+//const categoryRouter = require('./routes/category_router');
 var app = express();
 
 // view engine setup
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/user', userRouter);
 app.use('/admin',adminRouter);
+//app.use('/category',categoryRouter);
 //app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
