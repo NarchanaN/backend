@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors=require('cors')
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://archana:root@cluster0.1bsis.mongodb.net/backend-api?retryWrites=true&w=majority')
@@ -18,7 +19,7 @@ const userRouter = require('./routes/users_router');
 const adminRouter = require('./routes/admin_router');
 //const categoryRouter = require('./routes/category_router');
 var app = express();
-
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
