@@ -4,25 +4,9 @@ const categorySchema = mongoose.Schema({
         type: String,
         required: true
     },
-    cat_image:{
+    /*cat_image:{
         type: String,
         required:true
-    },
-    cat_qty:{
-        type:Number,
-        required:true
-    },
-    cat_price:{
-        type:Number,
-        required:true
-     },
-    cat_discount:{
-        type:Number,
-        required:true
-    },
-    cat_desc:{
-        type:String,
-        required:true
-    }
-
+    }*/
 })
+module.exports =  mongoose.model('category',categorySchema);

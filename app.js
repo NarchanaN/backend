@@ -17,6 +17,11 @@ console.log(err)
 
 const userRouter = require('./routes/users_router');
 const adminRouter = require('./routes/admin_router');
+const categoryRouter = require('./routes/category_router');
+
+
+
+
 //const categoryRouter = require('./routes/category_router');
 var app = express();
 app.use(cors());
@@ -32,8 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/user', userRouter);
 app.use('/admin',adminRouter);
-//app.use('/category',categoryRouter);
-//app.use('/users', usersRouter);
+app.use('/category',categoryRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
