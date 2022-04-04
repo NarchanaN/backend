@@ -9,6 +9,7 @@ exports.add = (req,res,next)=>{
         console.log(result)
         return res.status(201).json(result)
     })
+
     .catch(err=>{
         console.log(err)
         return res.status(500).json({messgae:"Oops!something went wrong"})
