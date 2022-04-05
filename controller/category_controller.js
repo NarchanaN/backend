@@ -3,7 +3,7 @@ const Category = require('../model/categort_model');
 exports.add = (req,res,next)=>{
     Category.create({
         cat_name:req.body.cat_name,
-        cat_image:'http://localhost:3000/images'+req.file.filename
+        cat_image:'https://afront.herokuapp.com/images'+req.file.filename
     })
     .then(result=>{
         console.log(result)
